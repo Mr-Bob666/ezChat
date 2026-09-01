@@ -1,0 +1,92 @@
+@import './variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: 100%;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  font-feature-settings: "ss01","cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brand);
+}
+
+::selection {
+  background: rgba(64,158,255,.28);
+  color: var(--ink);
+}
+
+/* ---- Element Plus overrides ---- */
+.el-button--primary {
+  --el-button-bg-color: var(--brand);
+  --el-button-border-color: var(--brand);
+  --el-button-hover-bg-color: var(--brand-lo);
+  --el-button-hover-border-color: var(--brand-lo);
+  --el-button-active-bg-color: var(--brand-deep);
+  --el-button-active-border-color: var(--brand-deep);
+}
+
+.el-overlay-dialog {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  padding: 15vh 16px 50px;
+}
+.el-overlay-dialog .el-dialog,
+.el-dialog {
+  margin: 0 auto !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--hair);
+  box-shadow: var(--shadow-pop) !important;
+  max-width: calc(100vw - 32px);
+}
+.el-dialog__header {
+  padding: 22px 24px 8px !important;
+  margin-right: 0 !important;
+}
+.el-dialog__title {
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+  letter-spacing: -0.01em;
+  font-size: 17px !important;
+}
+.el-dialog__headerbtn {
+  top: 18px !important;
+  right: 18px !important;
+}
+.el-dialog__body {
+  padding: 12px 24px 20px !important;
+  color: var(--ink-2) !important;
+}
+.el-dialog__footer {
+  padding: 0 24px 22px !important;
+}
+
+.el-message-box {
+  border-radius: 16px !important;
+  border: 1px solid var(--hair);
+}
+
+.el-dropdown-menu {
+  border-radius: 12px !important;
+  border: 1px solid var(--hair) !important;
+  box-shadow: var(--shadow-pop) !important;
+  padding: 6px !important;
+}
+.el-dropdown-menu__item {
+  border-radius: 8px !important;
+  font-size: 13px !important;
+}
+
+.el-input__wrapper {
+  border-radius: 10px;
+}

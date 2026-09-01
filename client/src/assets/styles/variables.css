@@ -1,0 +1,43 @@
+:root {
+  /* ---- Landing brand palette ---- */
+  --brand: #409eff;
+  --brand-hi: #6cb4ff;
+  --brand-lo: #1d6fd1;
+  --brand-deep: #0a4ea8;
+
+  --ink: #0b1e3f;
+  --ink-2: #1a2e54;
+  --ink-3: #475878;
+  --muted: #6b7891;
+
+  --hair: rgba(11, 30, 63, 0.08);
+  --hair-2: rgba(11, 30, 63, 0.04);
+
+  --bg: #ffffff;
+  --bg-1: #fbfdff;
+  --bg-2: #f5f9ff;
+  --bg-3: #eaf2ff;
+
+  --shadow-card: 0 1px 2px rgba(11,30,63,.04), 0 8px 24px rgba(64,158,255,.08);
+  --shadow-pop: 0 24px 60px -20px rgba(64,158,255,.30), 0 4px 12px rgba(11,30,63,.06);
+
+  --font-sans: "Manrope", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-cn:   "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ---- Legacy aliases (kept for components that still reference them) ---- */
+  --primary: var(--brand);
+  --primary-light: var(--bg-3);
+  --success: #22c55e;
+  --warning: #e6a23c;
+  --danger: #f56c6c;
+  --info: #909399;
+  --bg-white: #ffffff;
+  --text-primary: var(--ink);
+  --text-regular: var(--ink-2);
+  --text-secondary: var(--muted);
+  --border: var(--hair);
+  --border-light: var(--hair);
+  --sidebar-width: 260px;
+  --header-height: 64px;
+}
