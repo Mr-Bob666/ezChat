@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" xml:lang="zh-CN" font-family="Microsoft YaHei, Trebuchet MS, sans-serif">
+  <defs>
+    <marker id="arrowCoral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#E76F51"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#2F5D62"/>
+    </marker>
+  </defs>
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#FFF9EE"/>
+  <g id="page-doodles" data-pptx-role="decoration" data-pptx-bounds="0 0 1280 720" fill="none" stroke="#D7CBB5" stroke-width="2" stroke-linecap="round">
+    <path d="M1172 68 l14 -14 l14 14 l14 -14"/><path d="M82 654 q16 -18 32 0 q16 18 32 0"/>
+  </g>
+  <g id="page-header" data-pptx-bounds="64 38 1152 100">
+    <text x="64" y="91" font-family="KaiTi, Trebuchet MS, serif" font-size="52" font-weight="bold" fill="#263238">第二步：让数据结构承担真实职责</text>
+    <path d="M66 115 Q262 105 452 116" fill="none" stroke="#E76F51" stroke-width="6" stroke-linecap="round" opacity="0.68"/>
+  </g>
+  <g id="data-structure-panels" data-pptx-bounds="64 154 1152 440">
+    <g id="map-panel">
+      <rect x="64" y="154" width="344" height="440" rx="24" fill="#F2ECD8" stroke="#2F5D62" stroke-width="3"/>
+      <!-- icon: tabler-outline/route -->
+  <g transform="translate(88, 178) scale(1.75)" fill="none" stroke="#2F5D62" stroke-width="2">
+    <path d="M3 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+    <path d="M19 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4" />
+    <path d="M11 19h5.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h4.5" />
+  </g>
+      <text x="146" y="211" font-size="30" font-weight="bold" fill="#263238">Map：定位在线用户</text>
+      <text x="92" y="254" font-size="24" fill="#5D696B">userId → socketId</text>
+      <g id="map-entries" font-family="Consolas, Microsoft YaHei, monospace" font-size="24">
+        <rect x="92" y="282" width="124" height="58" rx="14" fill="#FFF9EE"/>
+        <text x="154" y="319" text-anchor="middle" fill="#263238">user_7</text>
+        <path d="M222 311 Q246 300 266 311" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowCoral)"/>
+        <rect x="274" y="282" width="108" height="58" rx="14" fill="#FFF9EE" stroke="#E76F51" stroke-width="3"/>
+        <text x="328" y="319" text-anchor="middle" fill="#263238">s_A2</text>
+        <rect x="92" y="358" width="124" height="58" rx="14" fill="#FFF9EE"/>
+        <text x="154" y="395" text-anchor="middle" fill="#263238">user_9</text>
+        <path d="M222 387 Q246 376 266 387" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowCoral)"/>
+        <rect x="274" y="358" width="108" height="58" rx="14" fill="#FFF9EE" stroke="#E76F51" stroke-width="3"/>
+        <text x="328" y="395" text-anchor="middle" fill="#263238">s_F8</text>
+      </g>
+      <rect x="92" y="458" width="290" height="94" rx="18" fill="#FFF9EE"/>
+      <text x="112" y="494" font-size="24" font-weight="bold" fill="#E76F51">为什么选 Map？</text>
+      <text x="112" y="529" font-size="22" fill="#5D696B">定向推送无需遍历全部连接</text>
+      <text x="382" y="578" text-anchor="end" font-size="22" font-weight="bold" fill="#2F5D62">平均查询 O(1)</text>
+    </g>
+    <g id="relation-panel">
+      <rect x="432" y="154" width="390" height="440" rx="24" fill="#FFF9EE" stroke="#E9C46A" stroke-width="4"/>
+      <!-- icon: tabler-outline/database -->
+  <g transform="translate(456, 178) scale(1.75)" fill="none" stroke="#2F5D62" stroke-width="2">
+    <path d="M4 6a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" />
+    <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
+    <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
+  </g>
+      <text x="514" y="211" font-size="30" font-weight="bold" fill="#263238">五张表：组织关系</text>
+      <g id="table-network" font-size="22" font-weight="bold" text-anchor="middle">
+        <rect x="458" y="266" width="126" height="54" rx="14" fill="#F2ECD8" stroke="#2F5D62" stroke-width="3"/>
+        <text x="521" y="301" fill="#263238">User</text>
+        <rect x="670" y="266" width="126" height="54" rx="14" fill="#F2ECD8" stroke="#2F5D62" stroke-width="3"/>
+        <text x="733" y="301" fill="#263238">Room</text>
+        <rect x="543" y="358" width="168" height="58" rx="14" fill="#E9C46A" fill-opacity="0.68" stroke="#E76F51" stroke-width="3"/>
+        <text x="627" y="394" fill="#263238">RoomMember</text>
+        <rect x="458" y="478" width="138" height="54" rx="14" fill="#F2ECD8"/>
+        <text x="527" y="513" fill="#263238">RoomBan</text>
+        <rect x="666" y="478" width="130" height="54" rx="14" fill="#F2ECD8"/>
+        <text x="731" y="513" fill="#263238">Message</text>
+      </g>
+      <g id="table-links" fill="none" stroke="#2F5D62" stroke-width="3" stroke-linecap="round">
+        <path d="M540 320 Q558 338 584 358"/>
+        <path d="M714 320 Q696 338 672 358"/>
+        <path d="M582 416 Q548 446 530 478"/>
+        <path d="M678 416 Q710 446 728 478"/>
+      </g>
+      <text x="627" y="556" text-anchor="middle" font-size="22" fill="#5D696B">成员角色、禁言与消息都有清晰归属</text>
+    </g>
+    <g id="fsm-panel">
+      <rect x="846" y="154" width="370" height="440" rx="24" fill="#F2ECD8" stroke="#E76F51" stroke-width="3"/>
+      <!-- icon: tabler-outline/phone -->
+  <g transform="translate(870, 178) scale(1.75)" fill="none" stroke="#E76F51" stroke-width="2">
+    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+  </g>
+      <text x="928" y="211" font-size="30" font-weight="bold" fill="#263238">FSM：约束通话</text>
+      <g id="fsm-states" font-family="Consolas, Microsoft YaHei, monospace" font-size="24" text-anchor="middle">
+        <rect x="886" y="264" width="120" height="54" rx="27" fill="#FFF9EE" stroke="#2F5D62" stroke-width="3"/>
+        <text x="946" y="298" fill="#263238">idle</text>
+        <rect x="1054" y="264" width="126" height="54" rx="27" fill="#FFF9EE" stroke="#E76F51" stroke-width="3"/>
+        <text x="1117" y="298" fill="#263238">calling</text>
+        <rect x="1050" y="376" width="138" height="54" rx="27" fill="#FFF9EE" stroke="#E9C46A" stroke-width="4"/>
+        <text x="1119" y="410" fill="#263238">connecting</text>
+        <rect x="886" y="376" width="132" height="54" rx="27" fill="#2F5D62"/>
+        <text x="952" y="410" fill="#FFF9EE">connected</text>
+      </g>
+      <g id="fsm-arrows" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round">
+        <path d="M1008 291 Q1028 280 1050 291" marker-end="url(#arrowCoral)"/>
+        <path d="M1117 322 Q1132 346 1119 372" marker-end="url(#arrowCoral)"/>
+        <path d="M1046 403 Q1034 392 1022 403" marker-end="url(#arrowCoral)"/>
+        <path d="M946 372 Q930 346 946 322" marker-end="url(#arrowCoral)"/>
+      </g>
+      <text x="1031" y="474" text-anchor="middle" font-size="24" fill="#263238">state.status 驱动界面切换</text>
+      <text x="1031" y="512" text-anchor="middle" font-size="22" fill="#5D696B">拒接、挂断、断连都回到 idle</text>
+      <path d="M886 546 Q1028 562 1184 544" fill="none" stroke="#E9C46A" stroke-width="7" stroke-linecap="round" opacity="0.72"/>
+    </g>
+  </g>
+  <g id="page-takeaway" data-pptx-bounds="64 614 1152 50">
+    <rect x="64" y="614" width="1152" height="50" rx="18" fill="#E9C46A" fill-opacity="0.42"/>
+    <text x="88" y="648" font-size="30" fill="#263238">Map 管<tspan fill="#E76F51" font-weight="bold">定位</tspan>，关系模型管<tspan fill="#E76F51" font-weight="bold">归属</tspan>，状态机管<tspan fill="#E76F51" font-weight="bold">变化</tspan>。</text>
+  </g>
+  <g id="page-footer" data-pptx-bounds="64 672 1152 30">
+    <text x="64" y="694" font-size="16" fill="#5D696B">DATA STRUCTURES</text>
+    <text x="1216" y="694" text-anchor="end" font-size="16" fill="#5D696B">04</text>
+  </g>
+</svg>

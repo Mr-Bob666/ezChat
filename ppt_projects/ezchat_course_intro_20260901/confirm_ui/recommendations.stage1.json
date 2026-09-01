@@ -1,0 +1,29 @@
+{
+  "stage": "stage1",
+  "lang": "zh",
+  "primary_language": "zh-CN",
+  "recommend": {
+    "canvas": "ppt169"
+  },
+  "audience": {
+    "value": "数据结构课程教师与同学；具备基础编程知识，重点关注项目如何构建、课程知识如何落地，以及系统是否形成完整闭环"
+  },
+  "communication_intent": {
+    "value": "用简洁的课堂讲解说明 ezChat 从需求到架构、从核心流程到数据结构应用的构建思路，并用运行结果证明方案可实现"
+  },
+  "audience_outcome": {
+    "value": "听众能快速建立项目全貌，理解前后端分层、HTTP/Socket.IO/WebRTC 的职责划分，以及 Map、关系模型和有限状态机在真实功能中的作用"
+  },
+  "core_message": {
+    "value": "ezChat 的构建核心是职责分层、协议分工与数据结构支撑：让账户、房间、消息和语音通话形成一个可扩展的实时聊天闭环"
+  },
+  "delivery_context": {
+    "value": "主要用于有主讲的 6–8 分钟课程项目介绍；次要作为课后查看的简要项目说明"
+  },
+  "artifact_afterlife": {
+    "value": "用于课程项目展示、评阅，以及后续演示时快速回顾系统结构与核心流程"
+  },
+  "content_divergence": {
+    "value": ""
+  }
+}

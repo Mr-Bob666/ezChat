@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" xml:lang="zh-CN" font-family="Microsoft YaHei, Trebuchet MS, sans-serif">
+  <defs>
+    <marker id="arrowCoral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#E76F51"/>
+    </marker>
+  </defs>
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#FFF9EE"/>
+  <g id="page-doodles" data-pptx-role="decoration" data-pptx-bounds="0 0 1280 720" fill="none" stroke="#D7CBB5" stroke-width="2" stroke-linecap="round">
+    <path d="M1180 76 Q1202 58 1214 82"/><path d="M1172 88 Q1198 104 1218 91"/>
+    <circle cx="92" cy="656" r="8"/><circle cx="116" cy="656" r="4"/>
+  </g>
+  <g id="page-header" data-pptx-bounds="64 42 1152 96">
+    <text x="64" y="92" font-family="KaiTi, Trebuchet MS, serif" font-size="52" font-weight="bold" fill="#263238">一个可用的聊天室，要闭环哪些事？</text>
+    <path d="M66 116 Q248 108 420 117" fill="none" stroke="#E76F51" stroke-width="6" stroke-linecap="round" opacity="0.68"/>
+  </g>
+  <g id="user-journey" data-pptx-bounds="64 160 420 430">
+    <text x="68" y="190" font-size="24" font-weight="bold" fill="#2F5D62">用户路径</text>
+    <path d="M112 220 Q91 278 112 332 T112 444 T112 548" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowCoral)"/>
+    <g id="journey-login">
+      <circle cx="112" cy="226" r="30" fill="#F2ECD8" stroke="#2F5D62" stroke-width="3"/>
+      <use data-icon="tabler-outline/users" x="94" y="208" width="36" height="36" fill="#2F5D62" stroke-width="2"/>
+      <text x="166" y="235" font-size="30" fill="#263238">注册 / 登录</text>
+    </g>
+    <g id="journey-room">
+      <circle cx="112" cy="306" r="30" fill="#F2ECD8" stroke="#2F5D62" stroke-width="3"/>
+      <use data-icon="tabler-outline/route" x="94" y="288" width="36" height="36" fill="#2F5D62" stroke-width="2"/>
+      <text x="166" y="315" font-size="30" fill="#263238">创建 / 加入房间</text>
+    </g>
+    <g id="journey-message">
+      <circle cx="112" cy="386" r="30" fill="#F2ECD8" stroke="#2F5D62" stroke-width="3"/>
+      <use data-icon="tabler-outline/message-circle" x="94" y="368" width="36" height="36" fill="#2F5D62" stroke-width="2"/>
+      <text x="166" y="395" font-size="30" fill="#263238">实时消息与在线状态</text>
+    </g>
+    <g id="journey-governance">
+      <circle cx="112" cy="466" r="30" fill="#F2ECD8" stroke="#E9C46A" stroke-width="4"/>
+      <use data-icon="tabler-outline/shield-lock" x="94" y="448" width="36" height="36" fill="#2F5D62" stroke-width="2"/>
+      <text x="166" y="475" font-size="30" fill="#263238">角色与成员治理</text>
+    </g>
+    <g id="journey-call">
+      <circle cx="112" cy="546" r="30" fill="#E76F51"/>
+      <use data-icon="tabler-outline/phone" x="94" y="528" width="36" height="36" fill="#FFF9EE" stroke-width="2"/>
+      <text x="166" y="555" font-size="30" font-weight="bold" fill="#263238">一对一语音通话</text>
+    </g>
+  </g>
+  <g id="interface-evidence" data-pptx-bounds="520 154 696 436">
+    <rect x="604" y="166" width="596" height="418" rx="18" fill="#F2ECD8" stroke="#D7CBB5" stroke-width="3"/>
+    <image href="../images/image_004.png" x="616" y="178" width="572" height="400" preserveAspectRatio="xMidYMid meet"/>
+    <rect x="528" y="382" width="274" height="196" rx="18" fill="#FFF9EE" stroke="#E76F51" stroke-width="4"/>
+    <image href="../images/image_003.png" x="540" y="394" width="250" height="171" preserveAspectRatio="xMidYMid meet"/>
+    <path d="M546 374 Q590 352 650 360" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round"/>
+    <text x="538" y="366" font-size="24" font-weight="bold" fill="#E76F51">入口</text>
+    <g id="interface-labels" font-size="24" fill="#2F5D62">
+      <rect x="824" y="152" width="138" height="40" rx="18" fill="#FFF9EE" stroke="#2F5D62" stroke-width="2"/>
+      <text x="893" y="180" text-anchor="middle">聊天工作台</text>
+      <rect x="1004" y="548" width="176" height="38" rx="18" fill="#E9C46A" fill-opacity="0.84"/>
+      <text x="1092" y="575" text-anchor="middle">房间 · 消息 · 成员</text>
+    </g>
+  </g>
+  <g id="page-takeaway" data-pptx-bounds="64 610 1152 52">
+    <rect x="64" y="610" width="1152" height="52" rx="18" fill="#F2ECD8"/>
+    <text x="88" y="646" font-size="28" fill="#263238">项目重点不是一个消息框，而是<tspan fill="#E76F51" font-weight="bold">让身份、房间、治理、消息和语音连成闭环</tspan>。</text>
+  </g>
+  <g id="page-footer" data-pptx-bounds="64 672 1152 30">
+    <text x="64" y="694" font-size="16" fill="#5D696B">PROJECT GOAL</text>
+    <text x="1216" y="694" text-anchor="end" font-size="16" fill="#5D696B">02</text>
+  </g>
+</svg>

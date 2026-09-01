@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="cover" xml:lang="zh-CN" font-family="Microsoft YaHei, Trebuchet MS, sans-serif">
+  <defs>
+    <marker id="arrowCoral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#E76F51" />
+    </marker>
+  </defs>
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#FFF9EE" />
+  <g id="paper-speckles" data-pptx-role="decoration" data-pptx-bounds="0 0 1280 720" fill="#D7CBB5" fill-opacity="0.38">
+    <circle cx="92" cy="82" r="3" /><circle cx="118" cy="93" r="2" /><circle cx="1202" cy="88" r="3" />
+    <circle cx="1168" cy="642" r="2" /><circle cx="1128" cy="661" r="3" /><circle cx="682" cy="70" r="2" />
+  </g>
+  <g id="cover-title" data-pptx-bounds="70 96 680 300">
+    <text font-size="52" fill="#263238" font-family="KaiTi, Trebuchet MS, serif" font-weight="bold" x="76" y="150">ezChat：从数据结构</text><text font-size="52" fill="#263238" font-family="KaiTi, Trebuchet MS, serif" font-weight="bold" x="76" y="219">到实时聊天系统</text><path d="M78 246 Q266 236 454 247" fill="none" stroke="#E76F51" stroke-width="7" stroke-linecap="round" opacity="0.72" />
+    <text x="78" y="300" font-size="30" fill="#2F5D62">数据结构课程实践 · 项目构建思路介绍</text>
+    <text x="78" y="352" font-size="24" fill="#5D696B">谢模彦 · 软件工程 · 2026</text>
+  </g>
+  <g id="protocol-map" data-pptx-bounds="782 108 428 362">
+    <path d="M882 236 Q958 150 1050 208" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowCoral)" />
+    <path d="M1056 236 Q1128 290 1075 354" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowCoral)" />
+    <path d="M1030 368 Q918 420 844 330" fill="none" stroke="#E76F51" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowCoral)" />
+    <circle cx="938" cy="284" r="76" fill="#F2ECD8" stroke="#2F5D62" stroke-width="3" />
+    
+  <g transform="translate(902, 248) scale(3)" fill="none" stroke="#2F5D62" stroke-width="2">
+    <path d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1" />
+  </g>
+    <circle cx="1083" cy="174" r="54" fill="#FFF9EE" stroke="#2F5D62" stroke-width="3" />
+    <text x="1083" y="181" text-anchor="middle" font-family="Consolas, Microsoft YaHei, monospace" font-size="24" fill="#263238">HTTP</text>
+    <circle cx="1120" cy="340" r="62" fill="#FFF9EE" stroke="#E76F51" stroke-width="3" />
+    <text x="1120" y="334" text-anchor="middle" font-family="Consolas, Microsoft YaHei, monospace" font-size="22" fill="#263238">Socket.IO</text>
+    <text x="1120" y="362" text-anchor="middle" font-size="18" fill="#5D696B">实时事件</text>
+    <circle cx="824" cy="350" r="58" fill="#FFF9EE" stroke="#E9C46A" stroke-width="4" />
+    <text x="824" y="344" text-anchor="middle" font-family="Consolas, Microsoft YaHei, monospace" font-size="22" fill="#263238">WebRTC</text>
+    <text x="824" y="372" text-anchor="middle" font-size="18" fill="#5D696B">P2P 音频</text>
+  </g>
+  <g id="p01-hook-ribbon" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="ribbon" data-pptx-frame="78 476 520 92" fill="#E9C46A" stroke="none">
+    <path d="M 78 476 L 256.75 476 A 16.25 3.83 0 0 1 256.75 483.67 L 224.25 483.67 A 16.25 3.83 0 0 0 224.25 491.33 L 451.75 491.33 A 16.25 3.83 0 0 0 451.75 483.67 L 419.25 483.67 A 16.25 3.83 0 0 1 419.25 476 L 598 476 L 533 514.33 L 598 552.67 L 468 552.67 L 468 564.17 A 16.25 3.83 0 0 1 451.75 568 L 224.25 568 A 16.25 3.83 0 0 1 208 564.17 L 208 552.67 L 78 552.67 L 143 514.33 Z" />
+    <path d="M 273 479.83 A 16.25 3.83 0 0 1 256.75 483.67 L 224.25 483.67 A 16.25 3.83 0 0 0 224.25 491.33 L 273 491.33 Z M 403 479.83 A 16.25 3.83 0 0 0 419.25 483.67 L 451.75 483.67 A 16.25 3.83 0 0 1 451.75 491.33 L 403 491.33 Z" fill="#BFA157" />
+    <path d="M 78 476 L 256.75 476 A 16.25 3.83 0 0 1 256.75 483.67 L 224.25 483.67 A 16.25 3.83 0 0 0 224.25 491.33 L 451.75 491.33 A 16.25 3.83 0 0 0 451.75 483.67 L 419.25 483.67 A 16.25 3.83 0 0 1 419.25 476 L 598 476 L 533 514.33 L 598 552.67 L 468 552.67 L 468 564.17 A 16.25 3.83 0 0 1 451.75 568 L 224.25 568 A 16.25 3.83 0 0 1 208 564.17 L 208 552.67 L 78 552.67 L 143 514.33 Z M 273 479.83 L 273 491.33 M 403 491.33 L 403 479.83 M 208 552.67 L 208 487.5 M 468 487.5 L 468 552.67" fill="none" />
+  </g>
+  <g id="cover-hook" data-pptx-bounds="100 486 480 64">
+    <text x="338" y="529" text-anchor="middle" font-size="30" font-weight="bold" fill="#263238">一间聊天室 · 三种协议 · 五张表</text>
+  </g>
+  <g id="cover-footer" data-pptx-bounds="64 640 1152 40">
+    <line x1="64" y1="646" x2="1216" y2="646" stroke="#D7CBB5" stroke-width="2" />
+    <text x="1216" y="670" text-anchor="end" font-size="16" fill="#5D696B">01</text>
+  </g>
+</svg>

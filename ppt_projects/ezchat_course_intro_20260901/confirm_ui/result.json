@@ -1,0 +1,67 @@
+{
+  "primary_language": "zh-CN",
+  "canvas": "ppt169",
+  "audience": "数据结构课程教师与同学；具备基础编程知识，重点关注项目如何构建、课程知识如何落地，以及系统是否形成完整闭环",
+  "communication_intent": "用简洁的课堂讲解说明 ezChat 从需求到架构、从核心流程到数据结构应用的构建思路，并用运行结果证明方案可实现",
+  "audience_outcome": "听众能快速建立项目全貌，理解前后端分层、HTTP/Socket.IO/WebRTC 的职责划分，以及 Map、关系模型和有限状态机在真实功能中的作用",
+  "core_message": "ezChat 的构建核心是职责分层、协议分工与数据结构支撑：让账户、房间、消息和语音通话形成一个可扩展的实时聊天闭环",
+  "delivery_context": "主要用于有主讲的 6–8 分钟课程项目介绍；次要作为课后查看的简要项目说明",
+  "artifact_afterlife": "用于课程项目展示、评阅，以及后续演示时快速回顾系统结构与核心流程",
+  "content_divergence": "",
+  "delivery_purpose": "presentation",
+  "page_count": "7",
+  "mode": "custom",
+  "mode_behavior": "以 narrative 的情境—问题—解决为推进方式，从校园沟通需求切入，逐步揭示分层、实时通信和数据结构如何解决问题；关键转折用短问题承接，结尾回到完整演示闭环。",
+  "visual_style": "custom",
+  "visual_style_behavior": "采用 sketch-notes 的温暖纸张底色、轻微手绘线条、柔和色块和少量涂鸦标记；页面保持宽松留白，通过手绘箭头和圈注突出因果与先后关系。",
+  "color": {
+    "name": "暖纸课堂笔记",
+    "palette": {
+      "background": "#FFF9EE",
+      "secondary_bg": "#F2ECD8",
+      "primary": "#2F5D62",
+      "accent": "#E76F51",
+      "secondary_accent": "#E9C46A",
+      "body_text": "#263238"
+    }
+  },
+  "icons": "tabler-outline",
+  "typography": {
+    "name": "楷体标题 + 微软雅黑正文",
+    "heading": {
+      "css": "serif",
+      "english": "Trebuchet MS",
+      "primary": "KaiTi",
+      "sample_primary": "",
+      "sample_english": ""
+    },
+    "body": {
+      "css": "sans-serif",
+      "english": "Trebuchet MS",
+      "primary": "Microsoft YaHei",
+      "sample_primary": "",
+      "sample_english": ""
+    },
+    "body_size": 30,
+    "sizes": {
+      "title": 52,
+      "subtitle": 40,
+      "annotation": 24
+    },
+    "note": "",
+    "body_size_unit": "px"
+  },
+  "image_usage": [
+    "provided"
+  ],
+  "image_notes": "优先使用报告中已有的系统架构图、登录页、聊天主界面和语音通话截图作为事实证据；截图保持完整、不裁切，其他较小截图仅在确有说明价值时使用。不新增网络图片或 AI 图片。",
+  "proactive_speaker_notes": true,
+  "proactive_custom_animations": false,
+  "proactive_narration_audio": false,
+  "generation_mode": "continuous",
+  "refine_spec": false,
+  "design_spec_depth": "brief",
+  "stage": "final",
+  "status": "confirmed",
+  "confirmed_at": "2026-09-01T21:17:06"
+}
