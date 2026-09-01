@@ -1,9 +1,0 @@
-No,Filename,Width,Height,AspectRatio,PixelAspectRatio,SourceDisplayRatio,RatioSource,Format,HasTransparentPixels,UsageCount,DisplayRatioVariants,AssetKind,SvgRenderable,PptxNativeSupported,SizeKB,Category
-1,image_001.png,1375,286,4.81,4.81,4.81,native,PNG,True,1,,bitmap,True,True,133.8,Ultra-wide
-2,image_002.png,1194,1864,0.64,0.64,0.64,native,PNG,False,1,,bitmap,True,True,262.7,Portrait
-3,image_003.png,1835,1256,1.46,1.46,1.10,native,PNG,False,1,,bitmap,True,True,401.2,Standard landscape
-4,image_004.png,1819,1276,1.43,1.43,1.43,native,PNG,False,1,,bitmap,True,True,366.6,Standard landscape
-5,image_005.png,365,489,0.75,0.75,0.75,native,PNG,False,1,,bitmap,True,True,32.6,Portrait
-6,image_006.png,634,496,1.28,1.28,1.28,native,PNG,False,1,,bitmap,True,True,68.3,Standard landscape
-7,image_007.png,637,612,1.04,1.04,1.04,native,PNG,False,1,,bitmap,True,True,53.7,Near square
-8,image_008.png,338,469,0.72,0.72,0.72,native,PNG,False,1,,bitmap,True,True,25.6,Portrait
