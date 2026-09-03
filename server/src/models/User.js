@@ -30,6 +30,10 @@ const User = sequelize.define('User', {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
+  is_disabled: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+  },
   last_seen: {
     type: DataTypes.DATE,
     allowNull: true,

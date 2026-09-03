@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { User } from '../models/index.js';
 import config from '../config/index.js';
-import { UnauthorizedError, NotFoundError, ValidationError } from '../utils/errors.js';
+import { UnauthorizedError, ForbiddenError, NotFoundError, ValidationError } from '../utils/errors.js';
 import { verifyCode, consumeCode } from './verificationService.js';
 
 function generateToken(userId) {
@@ -40,6 +40,9 @@ export async function login({ email, password }) {
   const isMatch = await user.verifyPassword(password);
   if (!isMatch) {
     throw new UnauthorizedError('Invalid email or password');
+  }
+  if (user.is_disabled) {
+    throw new ForbiddenError('账号已被禁用，请联系管理员');
   }
   const token = generateToken(user.id);
   return { user: user.toSafeJSON(), token };

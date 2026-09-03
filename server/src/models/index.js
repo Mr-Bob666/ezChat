@@ -1,4 +1,5 @@
 import User from './User.js';
+import Admin from './Admin.js';
 import Room from './Room.js';
 import RoomMember from './RoomMember.js';
 import RoomBan from './RoomBan.js';
@@ -30,4 +31,4 @@ Message.belongsTo(Room, { foreignKey: 'room_id', as: 'room' });
 User.hasMany(Message, { foreignKey: 'user_id', as: 'messages' });
 Message.belongsTo(User, { foreignKey: 'user_id', as: 'sender' });
 
-export { User, Room, RoomMember, RoomBan, Message };
+export { User, Admin, Room, RoomMember, RoomBan, Message };
