@@ -42,11 +42,10 @@
 
 <script setup>
 import { computed } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { DataAnalysis, User, ChatDotRound, Message, Star } from '@element-plus/icons-vue';
 
 const route = useRoute();
-const router = useRouter();
 
 const adminInfo = computed(() => {
   try {
@@ -59,7 +58,7 @@ const adminInfo = computed(() => {
 function logout() {
   localStorage.removeItem('adminToken');
   localStorage.removeItem('adminInfo');
-  router.push('/login');
+  window.location.href = import.meta.env.VITE_CLIENT_URL || 'https://localhost:5173';
 }
 </script>
 

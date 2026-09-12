@@ -16,6 +16,7 @@
           <a href="#how">开始</a>
         </div>
         <div class="nav-cta">
+          <button class="btn btn-ghost" @click="adminDialogVisible = true">管理后台</button>
           <button class="btn btn-ghost" @click="goLogin">登录</button>
           <button class="btn btn-primary" @click="goRegister">
             免费注册 <ArrowIcon />
@@ -383,15 +384,59 @@
         </div>
       </div>
     </footer>
+    <!-- ============================================================
+         ADMIN LOGIN DIALOG
+    ============================================================ -->
+    <el-dialog v-model="adminDialogVisible" title="平台管理员登录" width="380px" align-center>
+      <el-form :model="adminForm" @submit.prevent="handleAdminLogin">
+        <el-form-item>
+          <el-input v-model="adminForm.username" placeholder="管理员账号" size="large" />
+        </el-form-item>
+        <el-form-item>
+          <el-input v-model="adminForm.password" type="password" placeholder="密码" size="large" show-password />
+        </el-form-item>
+        <el-button type="primary" size="large" style="width: 100%" :loading="adminLoading" native-type="submit">
+          进入后台
+        </el-button>
+      </el-form>
+    </el-dialog>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount, h, defineComponent } from 'vue';
+import { ref, reactive, computed, onMounted, onBeforeUnmount, h, defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
+import { ElMessage } from 'element-plus';
 import logoUrl from '../assets/images/landing-logo.png';
+import api from '../services/api.js';
 
 const router = useRouter();
+
+/* ---------- admin login ---------- */
+const ADMIN_URL = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5174';
+const adminDialogVisible = ref(false);
+const adminLoading = ref(false);
+const adminForm = reactive({ username: '', password: '' });
+
+async function handleAdminLogin() {
+  if (!adminForm.username || !adminForm.password) {
+    ElMessage.warning('请输入管理员账号和密码');
+    return;
+  }
+  adminLoading.value = true;
+  try {
+    const { data } = await api.post('/admin/login', adminForm);
+    const params = new URLSearchParams({
+      token: data.token,
+      username: data.admin.username,
+      adminId: String(data.admin.id),
+    });
+    window.location.href = `${ADMIN_URL}/?${params.toString()}`;
+  } catch (err) {
+    ElMessage.error(err.response?.data?.error?.message || '登录失败');
+    adminLoading.value = false;
+  }
+}
 
 /* ---------- icons (inline functional components) ---------- */
 const ArrowIcon = defineComponent({ render: () =>

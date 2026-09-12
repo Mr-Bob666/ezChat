@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { ElMessage } from 'element-plus';
-import router from '../router/index.js';
 
 const api = axios.create({
   baseURL: '/api/admin',
@@ -22,7 +21,7 @@ api.interceptors.response.use(
     if (error.response?.status === 401) {
       localStorage.removeItem('adminToken');
       localStorage.removeItem('adminInfo');
-      router.push('/login');
+      window.location.href = import.meta.env.VITE_CLIENT_URL || 'https://localhost:5173';
     }
     ElMessage.error(message);
     return Promise.reject(error);

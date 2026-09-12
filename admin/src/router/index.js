@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import AdminLayout from '../layout/AdminLayout.vue';
-import LoginView from '../views/LoginView.vue';
 import DashboardView from '../views/DashboardView.vue';
 import UsersView from '../views/UsersView.vue';
 import RoomsView from '../views/RoomsView.vue';
 import MessagesView from '../views/MessagesView.vue';
 import RecommendView from '../views/RecommendView.vue';
 
+const CLIENT_URL = import.meta.env.VITE_CLIENT_URL || 'https://localhost:5173';
+
 const routes = [
-  { path: '/login', name: 'login', component: LoginView },
   {
     path: '/',
     component: AdminLayout,
@@ -28,13 +28,25 @@ const router = createRouter({
   routes,
 });
 
+// 后台不再提供登录页：由主页面管理员登录后带 ?token= 跳转过来，
+// 这里接收并写入 localStorage；没有登录态则跳回主页面。
 router.beforeEach((to) => {
-  const token = localStorage.getItem('adminToken');
-  if (!token && to.path !== '/login') {
-    return '/login';
+  const { token, username, adminId } = to.query;
+  if (typeof token === 'string' && token) {
+    localStorage.setItem('adminToken', token);
+    localStorage.setItem('adminInfo', JSON.stringify({
+      id: Number(adminId) || 0,
+      username: typeof username === 'string' ? username : '',
+    }));
+    const query = { ...to.query };
+    delete query.token;
+    delete query.username;
+    delete query.adminId;
+    return { path: to.path, query, hash: to.hash, replace: true };
   }
-  if (token && to.path === '/login') {
-    return '/dashboard';
+  if (!localStorage.getItem('adminToken')) {
+    window.location.href = CLIENT_URL;
+    return false;
   }
 });
 
