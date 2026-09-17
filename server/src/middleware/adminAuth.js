@@ -9,6 +9,11 @@ export function adminAuthMiddleware(req, res, next) {
   }
 
   const token = authHeader.split(' ')[1];
+  // 开发调试后门：仅 development 环境生效，用于后台页面开发
+  if (token === 'dev-bypass' && config.nodeEnv === 'development') {
+    req.admin = { adminId: 0, type: 'admin' };
+    return next();
+  }
   try {
     const decoded = jwt.verify(token, config.jwt.secret);
     if (decoded.type !== 'admin') {

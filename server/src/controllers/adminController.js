@@ -18,6 +18,15 @@ export async function getStats(req, res, next) {
   }
 }
 
+export async function getOnlineTrend(req, res, next) {
+  try {
+    const trend = await adminService.getOnlineTrend(Number(req.query.days) || 7);
+    res.json(trend);
+  } catch (err) {
+    next(err);
+  }
+}
+
 export async function listUsers(req, res, next) {
   try {
     const { keyword, page, pageSize } = req.query;

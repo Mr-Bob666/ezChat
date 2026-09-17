@@ -10,6 +10,7 @@ router.post('/login', adminController.login);
 // Protected
 router.use(adminAuthMiddleware);
 router.get('/stats', adminController.getStats);
+router.get('/stats/online-trend', adminController.getOnlineTrend);
 router.get('/users', adminController.listUsers);
 router.put('/users/:id/disable', adminController.disableUser);
 router.put('/users/:id/enable', adminController.enableUser);

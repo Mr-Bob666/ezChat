@@ -4,6 +4,7 @@ import Room from './Room.js';
 import RoomMember from './RoomMember.js';
 import RoomBan from './RoomBan.js';
 import Message from './Message.js';
+import DailyOnlineStat from './DailyOnlineStat.js';
 
 // User - Room (creator)
 User.hasMany(Room, { foreignKey: 'created_by', as: 'ownedRooms' });
@@ -31,4 +32,4 @@ Message.belongsTo(Room, { foreignKey: 'room_id', as: 'room' });
 User.hasMany(Message, { foreignKey: 'user_id', as: 'messages' });
 Message.belongsTo(User, { foreignKey: 'user_id', as: 'sender' });
 
-export { User, Admin, Room, RoomMember, RoomBan, Message };
+export { User, Admin, Room, RoomMember, RoomBan, Message, DailyOnlineStat };

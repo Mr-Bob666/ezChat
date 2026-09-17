@@ -9,6 +9,8 @@ import config from '../config/index.js';
 import { Admin, User, Room, RoomMember, RoomBan, Message } from '../models/index.js';
 
 async function ensureDatabase() {
+  // sqlite 无需提前建库，sequelize 会自动创建存储文件
+  if (config.db.dialect === 'sqlite') return;
   const conn = await mysql.createConnection({
     host: config.db.host,
     port: config.db.port,

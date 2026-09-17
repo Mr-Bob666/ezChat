@@ -61,15 +61,17 @@ async function start() {
     console.log('Database connected successfully');
 
     // Sync models (alter: updates schema without dropping data; force: drops all data)
-    if (config.db.forceSync) {
+    // SQLite 不支持 alter 重建表（外键约束会失败），本地开发用普通 sync 即可
+    if (config.db.dialect === 'sqlite') {
+      await sequelize.sync();
+    } else if (config.db.forceSync) {
       await sequelize.sync({ force: true });
     } else {
       await sequelize.sync({ alter: true });
+      // Clean up duplicate indexes created by Sequelize alter sync (MySQL only)
+      await cleanupDuplicateIndexes();
     }
     console.log('Database synced');
-
-    // Clean up duplicate indexes created by Sequelize alter sync
-    await cleanupDuplicateIndexes();
 
     // Seed default rooms & fix legacy owner roles & generate invite codes
     await seedRooms();

@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { Op } from 'sequelize';
 import sequelize from '../config/database.js';
 import config from '../config/index.js';
-import { Admin, User, Room, RoomMember, RoomBan, Message } from '../models/index.js';
+import { Admin, User, Room, RoomMember, RoomBan, Message, DailyOnlineStat } from '../models/index.js';
 import { UnauthorizedError, NotFoundError, ValidationError } from '../utils/errors.js';
 
 function generateAdminToken(adminId) {
@@ -35,6 +35,31 @@ export async function getStats() {
     Message.count({ where: { created_at: { [Op.gte]: todayStart } } }),
   ]);
   return { userCount, roomCount, messageCount, onlineCount, todayMessageCount };
+}
+
+function localDateString(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+export async function getOnlineTrend(days = 7) {
+  const start = new Date();
+  start.setHours(0, 0, 0, 0);
+  start.setDate(start.getDate() - (days - 1));
+  const rows = await DailyOnlineStat.findAll({
+    where: { date: { [Op.gte]: localDateString(start) } },
+  });
+  const peakByDate = new Map(rows.map((r) => [r.date, r.peak_count]));
+  const trend = [];
+  for (let i = days - 1; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const date = localDateString(d);
+    trend.push({ date, peak: peakByDate.get(date) ?? 0 });
+  }
+  return trend;
 }
 
 export async function listUsers({ keyword = '', page = 1, pageSize = 10 }) {

@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { User } from '../models/index.js';
+import { User, DailyOnlineStat } from '../models/index.js';
 import config from '../config/index.js';
 import { UnauthorizedError, ForbiddenError, NotFoundError, ValidationError } from '../utils/errors.js';
 import { verifyCode, consumeCode } from './verificationService.js';
@@ -58,12 +58,38 @@ export async function findUserById(id) {
   return user;
 }
 
+function localDateString(d = new Date()) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+async function recordOnlinePeak() {
+  try {
+    const count = await User.count({ where: { is_online: true } });
+    const today = localDateString();
+    const [stat] = await DailyOnlineStat.findOrCreate({
+      where: { date: today },
+      defaults: { peak_count: count },
+    });
+    if (count > stat.peak_count) {
+      stat.peak_count = count;
+      await stat.save();
+    }
+  } catch (err) {
+    console.error('Failed to record online peak:', err);
+  }
+}
+
 export async function setOnline(userId) {
   await User.update({ is_online: true, last_seen: new Date() }, { where: { id: userId } });
+  await recordOnlinePeak();
 }
 
 export async function setOffline(userId) {
   await User.update({ is_online: false, last_seen: new Date() }, { where: { id: userId } });
+  await recordOnlinePeak();
 }
 
 export async function updateAvatar(userId, avatarUrl) {

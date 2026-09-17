@@ -45,6 +45,12 @@ router.beforeEach((to) => {
     return { path: to.path, query, hash: to.hash, replace: true };
   }
   if (!localStorage.getItem('adminToken')) {
+    // 开发环境直接进入（配合服务端 dev-bypass 后门），生产环境跳回主页面登录
+    if (import.meta.env.DEV) {
+      localStorage.setItem('adminToken', 'dev-bypass');
+      localStorage.setItem('adminInfo', JSON.stringify({ id: 0, username: 'dev-admin' }));
+      return true;
+    }
     window.location.href = CLIENT_URL;
     return false;
   }
